@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --red: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+.dekstop-bg{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
+.main-left{
+    position: relative;
+}
+
+.main-right{
+    width: 400px;
+}
+
+.first-card{
+    left: -20px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.logo-card{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.card-number{
+    color: white;
+    font-size: 28px;
+    letter-spacing: 3px;
+    position: absolute;
+    bottom: 75px;
+    left: 30px;
+    font-weight: 500;
+}
+
+.name-expiring{
+    display: flex;
+    width: 387px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    justify-content: space-between;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.snd-card{
+    position: relative;
+    left: 70px;
+}
+
+.cvv{
+    position: absolute;
+    right: 58px;
+    bottom: 120px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 400px;
+    margin-bottom: 25px;
+}
+
+.input-title{
+    color: var(--very-dark-violet);
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+input{
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid var(--light-grayish-violet);
+    border-radius: 5px;
+}
+
+input::placeholder{
+    color: var(--light-grayish-violet);
+}
+
+input:active{
+    border: 2px solid var(--dark-grayish-violet);
+}
+
+input.fail-input{
+    border-color: var(--red);
+}
+
+.input-container.two-conts{
+    gap: 20px;
+    flex-direction: row;
+}
+
+.exp-date-container{
+    width: 50%;
+}
+
+.exp-inputs{
+    display: flex;
+    gap: 10px;
+}
+
+.exp-inputs > input{
+    width: 50%;
+}
+
+.confirm-btn,
+.continue-btn{
+    font-size: 18px;
+    background-color: var(--very-dark-violet);
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.cvc-container{
+    width: 50%;
+}
+
+.cvc-container input{
+    max-width: 100%;
+}
+
+.fail-text{
+    margin-top: 5px;
+    font-size: 14px;
+    color: var(--red);
+}
+
+.main-right.succes{
+    text-align: center;
+}
+
+.succes-title{
+    letter-spacing: 3px;
+    color: var(--very-dark-violet);
+    font-weight: 500;
+    margin: 25px;
+    margin-bottom: 15px;
+}
+
+.succes-text{
+    font-size: 18px;
+    color: var(--dark-grayish-violet);
+    margin-bottom: 60px;
+}
+
+.mobile-bg{
+    display: none;
+}
+
+.none{
+    display: none !important;
+}
+
+@media (max-width:375px) {
+    body{
+        height: auto;
+    }
+    .dekstop-bg{
+        display: none;
+    }
+    .mobile-bg{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    main{
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+    }
+    .main-left{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .first-card,
+    .snd-card{
+        width: 70%;
+    }
+    .first-card{
+        left: 16px;
+        z-index: 1;
+        top: -45px;
+        margin-bottom: 0;
+    }
+    .logo-card{
+        width: 20%;
+        top: 20px;
+        left: 20px;
+    }
+    .snd-card{
+        position: relative;
+        top: 25px;
+        left: 60px;
+        z-index: 0;
+    }
+    .cvv{
+        right: 15%;
+        bottom: 47%;
+        font-size: 12px;
+    }
+    .fst-card-bg,
+    .snd-card-bg{
+        max-width: 100%;
+    }
+    .card-number{
+        font-size: 15px;
+        bottom: 30%;
+        left: 7%;
+    }
+    .name-expiring{
+        width: 236px;
+        font-size: 12px;
+        left: 20px;
+        bottom: 20px;
+    }
+    
+    .input-container{
+        width: 100%;
+    }
+    .main-right{
+        width: 330px;
+        padding-left: 20px;
+    }
+    .input-title{
+        font-size: 12px;
+    }
+    .confirm-btn{
+        width: 100%;
+    }
+
+}

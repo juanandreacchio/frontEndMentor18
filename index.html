@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <img src="./img/bg-main-desktop.png" alt="" class="dekstop-bg">
+    <img src="./img/bg-main-mobile.png" alt="" class="mobile-bg">
+    <main>
+        <div class="main-left">
+            <div class="first-card">
+                <img src="./img/bg-card-front.png" alt="" class="fst-card-bg">
+                <div class="card-logos">
+                    <img src="./img/card-logo.svg" alt="" class="logo-card">
+                </div>
+                <p class="card-number">OOOO OOOO OOOO OOOO</p>
+                <p class="name-expiring">
+                    <span class="name">JANE APPLESEED</span>
+                    <span class="date"><span id="mm">00</span>/<span id="yy">00</span></span>
+                </p>
+            </div>
+            <div class="snd-card">
+                <img src="./img/bg-card-back.png" alt="" class="card-bg snd-card-bg">
+                <span class="cvv">000</span>
+            </div>
+        </div>
+        <div class="main-right form">
+            <div class="input-container">
+                <p class="input-title">CARDHOLDER NAME</p>
+                <input type="text" placeholder="e.g. Jane Appleseed" id="name-input">
+                <p class="fail-text none" id="texto-fail-name">Can`t be blank</p>
+            </div>
+            <div class="input-container">
+                <p class="input-title">CARD NUMBER</p>
+                <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="card-input">
+                <p class="fail-text none" id="texto-fail-number">Can`t be blank</p>
+            </div>
+            <div class="input-container two-conts">
+                <div class="exp-date-container">
+                    <p class="input-title exp-title">EXP. DATE (MM/YY)</p>
+                    <div class="exp-inputs">
+                        <input type="text" placeholder="MM" id="mm-input">
+                        <input type="text" placeholder="YY" id="yy-input">
+                    </div>
+                    <p class="fail-text none" id="texto-fail-exp">Can`t be blank</p>
+                </div>
+                <div class="cvc-container">
+                    <p class="input-title">CVC</p>
+                    <input type="text" placeholder="e.g. 123" id="cvc-input">
+                    <p class="fail-text none" id="texto-fail-cvc">Can`t be blank</p>
+                </div>
+            </div>
+            <button class="confirm-btn">Confirm</button>
+        </div>
+        <div class="main-right succes none">
+            <img src="./img/icon-complete.svg" alt="">
+            <h2 class="succes-title">THANK YOU!</h2>
+            <p class="succes-text">We've added your card details</p>
+            <button class="continue-btn">Continue</button>
+        </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
